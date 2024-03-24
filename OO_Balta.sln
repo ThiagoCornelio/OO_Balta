@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtmBuilder.Core", "UtmBuilder.Core\UtmBuilder.Core.csproj", "{E8DF7768-16F1-4886-81AC-D6BB9B50CD2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtmBuilder.Shared", "UtmBuilder.Shared\UtmBuilder.Shared.csproj", "{E80B2363-2799-491D-8D33-5556118C0E55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtmBuilder.Shared", "UtmBuilder.Shared\UtmBuilder.Shared.csproj", "{E80B2363-2799-491D-8D33-5556118C0E55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtmBuilder.Tests", "UtmBuilder.Tests\UtmBuilder.Tests.csproj", "{39846426-1203-4AE2-BED9-2F255A3E9BBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E80B2363-2799-491D-8D33-5556118C0E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E80B2363-2799-491D-8D33-5556118C0E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E80B2363-2799-491D-8D33-5556118C0E55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39846426-1203-4AE2-BED9-2F255A3E9BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39846426-1203-4AE2-BED9-2F255A3E9BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39846426-1203-4AE2-BED9-2F255A3E9BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39846426-1203-4AE2-BED9-2F255A3E9BBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

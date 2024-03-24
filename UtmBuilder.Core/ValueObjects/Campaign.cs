@@ -1,4 +1,6 @@
 ﻿
+using Flunt.Validations;
+using UtmBuilder.Core.ValueObjects.Exceptions;
 using UtmBuilder.Shared.ValueObjects;
 
 namespace UtmBuilder.Core.ValueObjects;
@@ -29,9 +31,15 @@ public class Campaign : ValueObject
         Term = term;
         Content = content;
 
-        //InvalidCampaignException.ThrowIfNull(source, "Source is invalid");
-        //InvalidCampaignException.ThrowIfNull(medium, "Medium is invalid");
-        //InvalidCampaignException.ThrowIfNull(name, "Name is invalid");
+        InvalidCampaignException.ThrowIfNull(source, "Source is invalid");
+        InvalidCampaignException.ThrowIfNull(medium, "Medium is invalid");
+        InvalidCampaignException.ThrowIfNull(name, "Name is invalid");
+
+        //Usando o Flunt
+        AddNotifications(new Contract<Campaign>()
+            .IsNotNullOrWhiteSpace(source, "Campaign.Source", "Fonte inválida")
+            .IsNotNullOrWhiteSpace(medium, "Campaign.Medium", "Média inválida")
+            .IsNotNullOrWhiteSpace(name, "Campaign.Name", "Nome inválido"));
     }
 
     /// <summary>

@@ -1,6 +1,7 @@
 ﻿
 using Flunt.Validations;
 using System.Runtime.CompilerServices;
+using UtmBuilder.Core.ValueObjects.Exceptions;
 using UtmBuilder.Shared.ValueObjects;
 
 namespace UtmBuilder.Core.ValueObjects;
@@ -15,10 +16,13 @@ public class Url : ValueObject
     public Url(string address)
     {
         Address = address;
-        //InvalidUrlException.ThrowIfInvalid(address);
+        
+        //Usando as exception customizadas
+        InvalidUrlException.ThrowIfInvalid(address);
+
+        //Usando o Flunt Validation
         AddNotifications(new Contract<Url>()
              .Requires()
-             //.HasMinLen(FirstName, 3, "Name.FirstName", "Nome deve conter pelo menos 3 caracteres")
              .IsUrl(Address, "Url.Address", "Url Inválida")
         );
     }
@@ -27,4 +31,9 @@ public class Url : ValueObject
     /// Address of URL (Website link)
     /// </summary>
     public string Address { get; }
+
+
+    //Para realizar a concatenação o stringBuilder 
+
+   
 }
